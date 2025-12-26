@@ -37,10 +37,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB    &kp Q  &kp W             &kp E     &kp R  &kp T                     &kp Y    &kp U  &kp I      &kp O              &kp P     &kp BSPC
-&mo 3      &kp A  &mt LEFT_SHIFT S  &kp D     &kp F  &kp G                     &kp H    &kp J  &kp K      &mt RIGHT_SHIFT L  &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z  &kp X             &kp C     &kp V  &kp B                     &kp N    &kp M  &kp COMMA  &kp DOT            &kp FSLH  &kp ESC
-                                    &kp LGUI  &mo 1  &mt LEFT_COMMAND SPACE    &kp RET  &mo 2  &kp RALT
+&kp TAB    &kp Q  &kp W             &kp E          &kp R  &kp T                     &kp Y    &kp U  &kp I      &kp O              &kp P     &kp BSPC
+&mo 3      &kp A  &mt LEFT_SHIFT S  &kp D          &kp F  &kp G                     &kp H    &kp J  &kp K      &mt RIGHT_SHIFT L  &kp SEMI  &kp SQT
+&kp COLON  &kp Z  &kp X             &kp C          &kp V  &kp B                     &kp N    &kp M  &kp COMMA  &kp DOT            &kp FSLH  &kp ESC
+                                    &kp LG(SPACE)  &mo 1  &mt LEFT_COMMAND SPACE    &kp RET  &mo 2  &kp RALT
             >;
         };
 
@@ -78,7 +78,7 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &kp K_SCROLL_UP    &kp PG_UP       &mkp LCLK     &trans           &trans       &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &mmv MOVE_LEFT     &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &change_tab  &clean
-&trans  &trans  &trans  &trans  &trans  &trans    &kp K_SCROLL_DOWN  &kp PAGE_DOWN   &trans        &trans           &trans       &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp K_SCROLL_DOWN  &kp PAGE_DOWN   &trans        &trans           &kt LC(TAB)  &kt LG(TAB)
                         &trans  &trans  &trans    &trans             &trans          &trans
             >;
         };
