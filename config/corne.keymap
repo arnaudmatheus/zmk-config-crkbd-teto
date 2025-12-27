@@ -39,7 +39,7 @@
             bindings = <
 &kp TAB    &kp Q  &kp W             &kp E          &kp R  &kp T                     &kp Y    &kp U  &kp I      &kp O              &kp P     &kp BSPC
 &mo 3      &kp A  &mt LEFT_SHIFT S  &kp D          &kp F  &kp G                     &kp H    &kp J  &kp K      &mt RIGHT_SHIFT L  &kp SEMI  &kp SQT
-&kp COLON  &kp Z  &kp X             &kp C          &kp V  &kp B                     &kp N    &kp M  &kp COMMA  &kp DOT            &kp FSLH  &kp ESC
+&kp COLON  &kp Z  &kp X             &kp C          &kp V  &kp B                     &kp N    &kp M  &kp COMMA  &kp DOT            &kp FSLH  &mt ESC DOUBLE_QUOTES
                                     &kp LG(SPACE)  &mo 1  &mt LEFT_COMMAND SPACE    &kp RET  &mo 2  &kp RALT
             >;
         };
