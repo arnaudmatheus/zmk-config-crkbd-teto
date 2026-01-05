@@ -76,7 +76,7 @@
 
         options {
             bindings = <
-&trans  &trans          &trans  &trans  &trans  &trans    &kp K_SCROLL_UP    &kp PG_UP       &mkp LCLK     &kp RA(RC(DOWN_ARROW))  &trans            &trans
+&trans  &trans          &trans  &trans  &trans  &trans    &kp K_SCROLL_UP    &kp PG_UP       &mkp LCLK     &kp RA(RG(DOWN_ARROW))  &trans            &trans
 &trans  &mmv MOVE_LEFT  &trans  &trans  &trans  &trans    &mmv MOVE_LEFT     &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT         &kt LEFT_CONTROL  &kp TAB
 &trans  &trans          &trans  &trans  &trans  &trans    &kp K_SCROLL_DOWN  &kp PAGE_DOWN   &trans        &trans                  &kt LC(TAB)       &kt LG(TAB)
                                 &trans  &trans  &trans    &trans             &trans          &trans
