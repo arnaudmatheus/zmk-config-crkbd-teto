@@ -76,8 +76,8 @@
 
         options {
             bindings = <
-&kt LA(G)  &kt LC(NUMBER_1)            &kt LC(NUMBER_2)      &kt LC(NUMBER_3)          &kt LC(NUMBER_4)       &kt LC(NUMBER_5)     &kp K_SCROLL_UP    &kp PG_UP       &mkp LCLK     &kp RA(RG(DOWN_ARROW))  &trans            &trans
-&trans     &kt LA(LC(LG(LEFT_ARROW)))  &kt LA(LC(LG(DOWN)))  &kt LA(LC(LG(UP_ARROW)))  &kt LA(LC(LG(RIGHT)))  &kt LA(LC(LG(F)))    &mmv MOVE_LEFT     &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT         &kt LEFT_CONTROL  &kp TAB
+&kp LA(G)  &kp LC(NUMBER_1)            &kp LC(NUMBER_2)      &kp LC(NUMBER_3)          &kp LC(NUMBER_4)       &kp LC(NUMBER_5)     &kp K_SCROLL_UP    &kp PG_UP       &mkp LCLK     &kp RA(RG(DOWN_ARROW))  &trans            &trans
+&trans     &kp LA(LC(LG(LEFT_ARROW)))  &kp LA(LC(LG(DOWN)))  &kp LA(LC(LG(UP_ARROW)))  &kp LA(LC(LG(RIGHT)))  &kp LA(LC(LG(F)))    &mmv MOVE_LEFT     &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT         &kt LEFT_CONTROL  &kp TAB
 &trans     &trans                      &trans                &trans                    &trans                 &trans               &kp K_SCROLL_DOWN  &kp PAGE_DOWN   &trans        &trans                  &kt LC(TAB)       &kt LG(TAB)
                                                              &trans                    &trans                 &trans               &trans             &trans          &trans
             >;
