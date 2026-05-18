@@ -33,6 +33,110 @@
             bindings = <&kt LEFT_CONTROL>;
             label = "CLEAN";
         };
+
+        tmux_split_h: tmux_split_h {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_CONTROL>,
+                <&macro_tap>,
+                <&kp SPACE>,
+                <&macro_release>,
+                <&kp LEFT_CONTROL>,
+                <&macro_tap>,
+                <&kp H>;
+
+            label = "TMUX_SPLIT_H";
+        };
+
+        tmux_split_v: tmux_split_v {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_CONTROL>,
+                <&macro_tap>,
+                <&kp SPACE>,
+                <&macro_release>,
+                <&kp LEFT_CONTROL>,
+                <&macro_tap>,
+                <&kp V>;
+
+            label = "TMUX_SPLIT_V";
+        };
+
+        tmux_kill_pane: tmux_kill_pane {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_CONTROL>,
+                <&macro_tap>,
+                <&kp SPACE>,
+                <&macro_release>,
+                <&kp LEFT_CONTROL>,
+                <&macro_tap>,
+                <&kp END>;
+
+            label = "TMUX_KILL_PANE";
+        };
+
+        tmux_next_win: tmux_next_win {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_CONTROL>,
+                <&macro_tap>,
+                <&kp SPACE>,
+                <&macro_release>,
+                <&kp LEFT_CONTROL>,
+                <&macro_tap>,
+                <&kp PG_UP>;
+
+            label = "TMUX_NEXT_WIN";
+        };
+
+        tmux_prev_win: tmux_prev_win {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_CONTROL>,
+                <&macro_tap>,
+                <&kp SPACE>,
+                <&macro_release>,
+                <&kp LEFT_CONTROL>,
+                <&macro_tap>,
+                <&kp PG_DN>;
+
+            label = "TMUX_PREV_WIN";
+        };
+
+        prefix_tmux: prefix_tmux {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_CONTROL>,
+                <&macro_tap>,
+                <&kp SPACE>,
+                <&macro_release>,
+                <&kp LEFT_CONTROL>;
+
+            label = "PREFIX_TMUX";
+        };
+    };
+
+    combos {
+        compatible = "zmk,combos";
+
+        teste_theme {
+            bindings = <&kp LG(LC(LS(SPACE)))>;
+            key-positions = <18 19>;
+            layers = <0>;
+        };
     };
 
     keymap {
@@ -46,10 +150,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB    &kp Q  &kp W             &kp E          &kp R  &kp T                     &kp Y    &kp U  &kp I      &kp O              &kp P     &kp BSPC
-&mo 3      &kp A  &mt LEFT_SHIFT S  &kp D          &kp F  &kp G                     &kp H    &kp J  &kp K      &mt RIGHT_SHIFT L  &kp SEMI  &mt RCTRL SQT
-&kp COLON  &kp Z  &kp X             &kp C          &kp V  &kp B                     &kp N    &kp M  &kp COMMA  &kp DOT            &kp FSLH  &kp DOUBLE_QUOTES
-                                    &kp LG(SPACE)  &mo 1  &mt LEFT_COMMAND SPACE    &kp RET  &mo 2  &mo 3
+&kp TAB    &kp Q  &kp W             &kp E               &kp R           &kp T                     &kp Y    &kp U            &kp I                &kp O              &kp P     &kp BSPC
+&mo 3      &kp A  &mt LEFT_SHIFT S  &mt LEFT_CONTROL D  &mt LEFT_ALT F  &kp G                     &kp H    &mt RIGHT_ALT J  &mt RIGHT_CONTROL K  &mt RIGHT_SHIFT L  &kp SEMI  &mt RCTRL SQT
+&kp COLON  &kp Z  &kp X             &kp C               &kp V           &kp B                     &kp N    &kp M            &kp COMMA            &kp DOT            &kp FSLH  &kp DOUBLE_QUOTES
+                                    &kp LG(SPACE)       &mo 1           &mt LEFT_COMMAND SPACE    &kp RET  &mo 2            &mo 3
             >;
         };
 
@@ -61,10 +165,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB     &kp N1        &kp N2        &kp N3        &kp N4        &kp N5          &kp N6            &kp N7    &kp N8    &kp N9     &kp N0  &kp BSPC
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp LEFT          &kp DOWN  &kp UP    &kp RIGHT  &trans  &trans
-&kp LSHFT   &trans        &trans        &trans        &trans        &trans          &tmux_new_window  &trans    &trans    &trans     &trans  &kp ESC
-                                        &kp LGUI      &trans        &kp SPACE       &kp RET           &trans    &kp RALT
+&kp TAB     &kp N1        &kp N2        &kp N3        &kp N4        &kp N5          &kp N6            &kp N7         &kp N8         &kp N9          &kp N0          &kp BSPC
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp LEFT          &kp DOWN       &kp UP         &kp RIGHT       &prefix_tmux    &trans
+&kp LSHFT   &trans        &trans        &trans        &trans        &trans          &tmux_new_window  &tmux_split_v  &tmux_split_h  &tmux_next_win  &tmux_prev_win  &tmux_kill_pane
+                                        &kp LGUI      &trans        &kp SPACE       &kp RET           &trans         &kp RALT
             >;
         };
 
