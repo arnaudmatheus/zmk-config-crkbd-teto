@@ -77,41 +77,9 @@
                 <&macro_release>,
                 <&kp LEFT_CONTROL>,
                 <&macro_tap>,
-                <&kp END>;
+                <&kp X>;
 
             label = "TMUX_KILL_PANE";
-        };
-
-        tmux_next_win: tmux_next_win {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_CONTROL>,
-                <&macro_tap>,
-                <&kp SPACE>,
-                <&macro_release>,
-                <&kp LEFT_CONTROL>,
-                <&macro_tap>,
-                <&kp PG_UP>;
-
-            label = "TMUX_NEXT_WIN";
-        };
-
-        tmux_prev_win: tmux_prev_win {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_CONTROL>,
-                <&macro_tap>,
-                <&kp SPACE>,
-                <&macro_release>,
-                <&kp LEFT_CONTROL>,
-                <&macro_tap>,
-                <&kp PG_DN>;
-
-            label = "TMUX_PREV_WIN";
         };
 
         prefix_tmux: prefix_tmux {
@@ -165,9 +133,9 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB     &kp N1        &kp N2        &kp N3        &kp N4        &kp N5          &kp N6            &kp N7         &kp N8         &kp N9          &kp N0          &kp BSPC
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp LEFT          &kp DOWN       &kp UP         &kp RIGHT       &prefix_tmux    &trans
-&kp LSHFT   &trans        &trans        &trans        &trans        &trans          &tmux_new_window  &tmux_split_v  &tmux_split_h  &tmux_next_win  &tmux_prev_win  &tmux_kill_pane
+&kp TAB     &kp N1        &kp N2        &kp N3        &kp N4        &kp N5          &kp N6            &kp N7         &kp N8         &kp N9         &kp N0              &kp BSPC
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp LEFT          &kp DOWN       &kp UP         &kp RIGHT      &prefix_tmux        &kp ESC
+&kp LSHFT   &trans        &trans        &trans        &trans        &trans          &tmux_new_window  &tmux_split_v  &tmux_split_h  &kp LA(RIGHT)  &kp RA(LEFT_ARROW)  &tmux_kill_pane
                                         &kp LGUI      &trans        &kp SPACE       &kp RET           &trans         &kp RALT
             >;
         };
@@ -189,10 +157,10 @@
 
         options {
             bindings = <
-&kp LA(G)  &kp LC(NUMBER_1)            &kp LC(NUMBER_2)      &kp LC(NUMBER_3)          &kp LC(NUMBER_4)       &kp LC(NUMBER_5)     &kp K_SCROLL_UP    &kp PG_UP       &mkp LCLK     &kp RA(RG(DOWN_ARROW))  &trans            &trans
-&trans     &kp LA(LC(LG(LEFT_ARROW)))  &kp LA(LC(LG(DOWN)))  &kp LA(LC(LG(UP_ARROW)))  &kp LA(LC(LG(RIGHT)))  &kp LA(LC(LG(F)))    &mmv MOVE_LEFT     &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT         &kt LEFT_CONTROL  &kp TAB
-&trans     &trans                      &trans                &trans                    &trans                 &trans               &kp K_SCROLL_DOWN  &kp PAGE_DOWN   &trans        &trans                  &kt LC(TAB)       &kt LG(TAB)
-                                                             &trans                    &trans                 &trans               &trans             &trans          &trans
+&kp LA(G)  &kp LG(NUMBER_1)            &kp LG(NUMBER_2)          &kp LG(NUMBER_3)          &kp LG(NUMBER_4)          &kp LG(NUMBER_5)      &kp K_SCROLL_UP    &kp PG_UP       &mkp LCLK     &kp RA(RG(DOWN_ARROW))  &trans            &trans
+&trans     &kp LA(LG(LS(LEFT_ARROW)))  &kp LA(LC(LG(DOWN)))      &kp LA(LC(LG(UP_ARROW)))  &kp LA(LG(LS(RIGHT)))     &kp LA(LC(LG(F)))     &mmv MOVE_LEFT     &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT         &kt LEFT_CONTROL  &kp TAB
+&trans     &kp LG(LS(LA(NUMBER_1)))    &kp LG(LS(LA(NUMBER_2)))  &kp LG(LS(LA(NUMBER_3)))  &kp LG(LA(LS(NUMBER_4)))  &kp LS(LA(LG(N5)))    &kp K_SCROLL_DOWN  &kp PAGE_DOWN   &trans        &trans                  &kt LC(TAB)       &kt LG(TAB)
+                                                                 &trans                    &trans                    &trans                &trans             &trans          &trans
             >;
         };
     };
